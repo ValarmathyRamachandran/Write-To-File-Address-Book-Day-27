@@ -204,13 +204,13 @@ import java.util.stream.Stream;
 		
 		public void WriteToFile() throws IOException
 		{
-			FileWriter fw = new FileWriter("Data.csv");
+			FileWriter fw = new FileWriter("DBAddressBook.txt");
 			System.out.println("File Writing Started");
-			fw.write("FirstName,LastName,Address,State,Zip,Phone,Email\n");
+			fw.write("FirstName LastName Address State Zip Phone Email\n");
 			for(int i=0;i<listContactInfo.size();i++) {
-				fw.write(listContactInfo.get(i).FirstName+","+listContactInfo.get(i).LastName+","
-			+listContactInfo.get(i).Address+","+listContactInfo.get(i).State+","
-			+listContactInfo.get(i).Zip+","+listContactInfo.get(i).PhoneNumber+","+listContactInfo.get(i).Email+"\n");
+				fw.write(listContactInfo.get(i).FirstName+" "+listContactInfo.get(i).LastName+" "
+			+listContactInfo.get(i).Address+" "+listContactInfo.get(i).State+" "
+			+listContactInfo.get(i).Zip+" "+listContactInfo.get(i).PhoneNumber+" "+listContactInfo.get(i).Email+"\n");
 			
 			}
 			fw.close();
